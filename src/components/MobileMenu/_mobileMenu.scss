@@ -1,0 +1,53 @@
+#mobile-menu{
+    width: 200px;
+    height: 200px;
+    padding: 4rem 2rem;
+    position: fixed;
+    height: 100vh;
+    right: -200px;
+    background-color: $primary;
+    color: white;
+    z-index: 5;
+    transition: all .3s;
+
+    .logo img{
+        width: 60px;
+    }
+
+    ul li{
+        margin: 2rem 0;
+        font-weight: bold;
+    }
+}
+.menu-active{
+    transition: all .3s;
+    right: 0!important;
+}
+.bg-active{
+    transition: all .3s;
+    display: block!important;
+}
+
+.menu-mobile-bg{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.387);
+    z-index: 4;
+}
+
+    
+/*
+    * MEDIA QUERIES
+*/
+
+
+// 800px
+@media (max-width: 800px) {
+    #hamburger-btn{
+        display: flex;
+    }
+}

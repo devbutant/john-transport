@@ -1,0 +1,53 @@
+// Inter 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap');
+
+// Kalam 
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+// Vibur
+@import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
+
+// Covered by your grace
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+
+
+// @mixin googleFonts($name){
+//     @import url('https://fonts.googleapis.com/css2?family=' + $name + '&display=swap');
+// }
+
+$light: #f1f1F1;
+$primary : #2E71AE;
+$light-primary : #2e70aeb2;
+$x-light-primary : #F7F8FA;
+$secondary : #272727;
+// $secondary : #4A4A4A;
+$medium-secondary : #a4a4a4ef;
+$light-secondary : #a4a4a47d;
+
+$tab:('primary': $primary, 'secondary': $secondary);
+
+@each $color, $varColor in $tab {
+    .#{$color}{
+        color: #{$varColor};
+    }
+    
+    .bg-#{$color}{
+        background-color: #{$varColor};
+    }
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.text-light{
+    color: $light;
+}
+
+.bg-x-light-gray{
+    background-color: $x-light-primary;
+}
+
+.bg-x-light-blue{
+    background-color: #2e70ae20;
+}

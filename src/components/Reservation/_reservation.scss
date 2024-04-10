@@ -1,0 +1,108 @@
+#reservation{
+    & form > *{
+        width: 47%;
+    }
+
+    // .reservation__form__container{
+    //     width: 49%;
+    // }
+    .reservation__img{
+        // width: 45%;
+
+        height: 40rem;
+        overflow: hidden;
+        border-radius: 3px;
+        
+        img{
+            opacity: .5;
+        }
+    }
+
+    .form{
+        input,
+        select,
+        textarea,
+        button{
+            padding: .2rem .5rem;
+            font-size: 1rem;
+            border: 1px solid $light-secondary;
+            border-radius: 3px;
+
+            &::placeholder{
+                font-size: 1rem;
+                color: $medium-secondary;
+            }
+        }
+
+        select{
+            height: 55%;
+        }
+
+        button{
+            cursor: pointer;
+            background-color: $light-secondary;
+            font-weight: bold;
+
+            &:hover{
+                background-color: #dcdcdc;
+            }
+        }
+
+        .input-group{
+            padding-top: 1rem;
+
+            .btn{
+                cursor: pointer;
+            }
+
+            .disabled{
+                pointer-events: none; 
+                font-style: italic;
+                color: $secondary;
+            }
+        }
+    }
+}
+
+@media (max-width:1100px) {
+    #reservation{
+        form{
+            flex-direction: column;
+        }
+        & form > *{
+            width: 100%;
+        }
+        .reservation__img{
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width:570px) {
+    #reservation{
+        padding: 1rem 0;
+        .reservation__form__container{
+            padding: 0;
+        }
+        .form{
+            .input-group,
+            input,
+            select,
+            textarea,
+            button{
+                width: 100%;
+            }    
+
+            .date,
+            .heure{
+                -webkit-min-logical-width: calc(100% - 16px);
+                background-color: white;
+            }
+
+            select{
+                background-color: white;
+            }
+        }    
+    }
+}

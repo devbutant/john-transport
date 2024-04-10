@@ -1,0 +1,41 @@
+// Hero banner 
+#hero-banner{
+    .hero-banner{
+        position: relative;
+        &__img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            overflow: hidden;
+
+            background: linear-gradient(rgba(0, 0, 0, 0.653), rgba(0, 0, 0, 0.153)),
+                        url('../../img/bg-hero-banner.png') no-repeat center/cover;
+        }
+
+        &__card{
+            position: absolute;
+            left: 50%; top: 50%;
+            width: 42rem;
+            height: 22rem;
+            transform: translate(-50%, -50%);
+
+            background-color: #f7f8fa6e;
+            -webkit-backdrop-filter: blur(2px); /* assure la compatibilité avec safari */
+            backdrop-filter: blur(2px);
+            border-radius: 3px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+    }
+}
+
+@media (max-width:1100px) {
+    #hero-banner{
+        .hero-banner{
+            &__card{
+                padding: 1rem;
+                width: 90%;
+            }
+        }
+    }
+}

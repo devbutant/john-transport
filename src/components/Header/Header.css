@@ -1,0 +1,45 @@
+@charset "UTF-8";
+#hero-banner .hero-banner {
+  position: relative;
+}
+
+#hero-banner .hero-banner__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80vh;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.653)), to(rgba(0, 0, 0, 0.153))), url("../../img/bg-hero-banner.png") no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.653), rgba(0, 0, 0, 0.153)), url("../../img/bg-hero-banner.png") no-repeat center/cover;
+}
+
+#hero-banner .hero-banner__card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 42rem;
+  height: 22rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #f7f8fa6e;
+  -webkit-backdrop-filter: blur(2px);
+  /* assure la compatibilité avec safari */
+  backdrop-filter: blur(2px);
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media (max-width: 1100px) {
+  #hero-banner .hero-banner__card {
+    padding: 1rem;
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=Header.css.map */
